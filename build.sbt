@@ -17,7 +17,7 @@ lazy val root = (project in file("."))
       ,guava
       ,scalaLogging
       ,slf4jSimple
-      ,enumeratum
+      ,quest
     )
   )
 // ===================================== common setting ======================================================
