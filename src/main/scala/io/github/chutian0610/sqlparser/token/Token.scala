@@ -3,7 +3,7 @@ package io.github.chutian0610.sqlparser.token
 /**
   * All KeyWord Enum with UpperCase Text
   *
-  * @param text
+  * @param text keyword string value
   */
 sealed class KeyWord(val text:String)
 case object ABORT extends KeyWord("ABORT")
@@ -955,6 +955,5 @@ case object YEAR extends KeyWord("YEAR")
 case object YEARS extends KeyWord("YEARS")
 case object ZONE extends KeyWord("ZONE")
 case object ZORDER extends KeyWord("ZORDER")
-
 
 sealed trait Token
