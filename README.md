@@ -1,8 +1,42 @@
-## sbt project compiled with Scala 3
+# SQL Parser in Scala
 
-### Usage
+This project is a Scala implementation of SQL parser, inspired by Apache DataFusion's SQL parser (datafusion-sqlparser-rs).
 
-This is a normal sbt project. You can compile code with `sbt compile`, run it with `sbt run`, and `sbt console` will start a Scala 3 REPL.
+## Features
 
-For more information on the sbt-dotty plugin, see the
-[scala3-example-project](https://github.com/scala/scala3-example-project/blob/main/README.md).
+- ANSI SQL compliant parser
+- Support for various SQL statements (SELECT, INSERT, UPDATE, DELETE, etc.)
+- Extensible architecture for custom SQL dialects
+- Built with Scala 3.7.0
+
+## Project Structure
+
+```
+
+```
+
+## Usage
+
+Add the dependency to your `build.sbt`:
+
+```scala
+libraryDependencies += "io.github.chutian0610" %% "sqlparser-scala" % "0.1.0-SNAPSHOT"
+```
+
+## Development
+
+This project uses SBT as the build tool. To build the project:
+
+```bash
+sbt compile
+```
+
+To run tests:
+
+```bash
+sbt test
+```
+
+## License
+
+Apache License 2.0
