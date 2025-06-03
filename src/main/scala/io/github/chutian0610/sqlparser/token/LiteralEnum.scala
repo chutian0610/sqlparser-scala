@@ -1,6 +1,16 @@
 package io.github.chutian0610.sqlparser.token
 
-sealed trait LiteralEnum(value:String)
+sealed trait LiteralEnum(value: String) {
+  override def toString(): String = this match
+    case LongLiteral(value)                  => value
+    case DoubleLiteral(value)                => value
+    case StringLiteral(value, quote)         => s"$quote$value$quote"
+    case ByteStringLiteral(value, quote)     => s"$quote$value$quote"
+    case NationalStringLiteral(value)        => s"N'$value'"
+    case EscapedStringLiteral(value)         => s"E'$value'"
+    case UnicodeStringLiteral(value, escape) => s"U&'$value' ESCAPE '$escape'"
+    case HexStringLiteral(value)             => s"X'$value'"
+}
 /* Long Number Literal */
 case class LongLiteral(value: String) extends LiteralEnum(value: String)
 
