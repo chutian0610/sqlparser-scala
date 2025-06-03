@@ -958,6 +958,8 @@ enum KeyWordEnum(val text: String):
   case  ZONE                             extends KeyWordEnum("ZONE")
   case  ZORDER                           extends KeyWordEnum("ZORDER")
 
+  override def toString: String = this.text
+
 object KeyWordEnum {
 
   def fromName(name: String): Option[KeyWordEnum] =
